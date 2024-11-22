@@ -1,0 +1,31 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int row,column,i,j,k,l;
+    printf("enter the number of rows: ");
+    scanf("%d",&row);
+    printf("enter the number of column: ");
+    scanf("%d",&column);
+    int ar1[row][column];
+    
+    for(j=1;j<=column;j++){
+        
+        for(i=1;i<=row;i++){
+            printf("enter the %dth element of the %dth row: ",i,j);
+            scanf("%d",&l);
+            ar1[j-1][i-1]=l;
+        }
+    }
+    printf("\n");
+    for (int i = 0; i < column; i++){ 
+        printf("|");
+        for (int j = 0; j < row; j++) {
+            printf("%d ", ar1[i][j]);
+        }
+        printf("|");
+        printf("\n");
+    
+    }
+    return 0;
+}
